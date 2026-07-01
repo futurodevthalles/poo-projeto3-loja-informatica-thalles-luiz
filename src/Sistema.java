@@ -1,4 +1,4 @@
-public class Sistema {
+    public class Sistema {
     private static Sistema instancia;
     private Cliente[] clientes = new Cliente[10];
     private Vendedor[] vendedores = new Vendedor[10];
