@@ -5,13 +5,23 @@ public class Cliente {
     float desconto;
     private Venda[] historicoCompras;
     
-    public Cliente (String nome, String telefone, float desconto, Venda venda){
+    private Cliente (String nome, String telefone, float desconto){
+        cdpessoa++;
         this.nome=nome;
         this.telefone=telefone;
         this.desconto=desconto;
-        this.historicoCompras[cdpessoa]=venda;
-        cdpessoa++;
     }
+    public static Cliente getInstance(String nome, String telefone, float desconto, Venda venda){
+        if(cdpessoa>0 || nome!=null && !nome.isBlank() && nome.length()>1 
+            && telefone!=null && !telefone.isBlank() && desconto>=0 
+            && desconto<=100){
+            return new Cliente(nome,telefone,desconto);
+        }
+        else{
+           throw new LojaInformaticaException("Dados inválidos para criação do cliente!");
+        }
+    }
+
     public String getNome(){
         return this.nome;
     }
