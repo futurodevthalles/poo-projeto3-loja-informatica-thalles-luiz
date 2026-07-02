@@ -1,3 +1,5 @@
+import excecoes.LojaInformaticaException;
+
 public class Cliente {
     private static int cdpessoa;
     private String nome;

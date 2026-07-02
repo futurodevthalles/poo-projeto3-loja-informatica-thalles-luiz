@@ -1,3 +1,5 @@
+import excecoes.LojaInformaticaException;
+
 public class Produto {
     private static int cdproduto;
     private String nmproduto;

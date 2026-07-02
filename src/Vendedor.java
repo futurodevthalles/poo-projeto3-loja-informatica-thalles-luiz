@@ -1,3 +1,5 @@
+import excecoes.LojaInformaticaException;
+
 public class Vendedor extends Cliente{
     private static int id;
     private float salario =1800;
@@ -10,6 +12,15 @@ public class Vendedor extends Cliente{
 
     public Vendedor(String nome, String telefone) {
         super(nome, telefone);
+    }
+
+    public static Vendedor getInstance(String nome, String telefone) {
+        if (nome != null && !nome.isBlank()
+                && telefone != null && !telefone.isBlank()) {
+            return new Vendedor(nome, telefone);
+        } else {
+            throw new LojaInformaticaException("Dados inválidos para criação do vendedor!");
+        }
     }
 
 
