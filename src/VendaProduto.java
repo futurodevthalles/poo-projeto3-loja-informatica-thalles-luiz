@@ -44,5 +44,13 @@ public class VendaProduto {
     public void setQtd(int qtd) {
         this.qtd = qtd;
     }
+
+    public Venda getVendafeita() {
+        return vendafeita;
+    }
+
+    public void setVendafeita(Venda vendafeita) {
+        this.vendafeita = vendafeita;
+    }
     
 }

@@ -1,5 +1,6 @@
 public class Venda {
     private static int cdvenda;
+    private int cdvendaatual;
     private float  precoTotal;
     private String dtVenda;
     private Cliente clienteVenda;
@@ -10,6 +11,7 @@ public class Venda {
         this.dtVenda = dtVenda;
         this.clienteVenda = clienteVenda;
         this.vendedorVenda = vendedorVenda;
+        this.cdvendaatual = cdvenda;
         cdvenda++;
 
     }
@@ -60,5 +62,14 @@ public class Venda {
     public void setVendedorVenda(Vendedor vendedorVenda) {
         this.vendedorVenda = vendedorVenda;
     }
+
+    public int getCdvendaatual() {
+        return cdvendaatual;
+    }
+
+    public void setCdvendaatual(int cdvendaatual) {
+        this.cdvendaatual = cdvendaatual;
+    }
+    
     
 }

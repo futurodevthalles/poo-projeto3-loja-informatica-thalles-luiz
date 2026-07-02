@@ -1,8 +1,8 @@
 public class Produto {
     private static int cdproduto;
-    String nmproduto;
-    float precop;
-    String tipoProduto;
+    private String nmproduto;
+    private float precop;
+    private String tipoProduto;
 
     private Produto (String nmproduto,float precop, String tipoProduto ){
         this.nmproduto=nmproduto;
